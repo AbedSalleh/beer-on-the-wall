@@ -1,1 +1,14 @@
+# magic 8 ball
 
+responses = ["nah","no","not rly","difficult","hardly","chances are stable","you moron"]
+
+question = input("Ask me something!:\n")
+
+import random
+number = random.randint(1,7)
+
+while number < 8:
+    number = 0
+    if number == int(1):
+        print(responses[0]
+    number = number + 1
