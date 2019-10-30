@@ -1,0 +1,12 @@
+import math
+while True:
+    a = int(input("Enter the first side: "))
+    b = int(input("Enter the second side: "))
+    c = math.sqrt(a**2 + b**2)
+    print("The third side should be: "+ str(c))
+    d = input("Calculate again? :Y/N\n")
+    if d == "Y":
+        continue
+    else:
+        break
+print("Thanks for using me!")
