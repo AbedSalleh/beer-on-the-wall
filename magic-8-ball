@@ -1,14 +1,33 @@
 # magic 8 ball
-
-responses = ["nah","no","not rly","difficult","hardly","chances are stable","you moron"]
-
-question = input("Ask me something!:\n")
-
 import random
-number = random.randint(1,7)
+import time
+responses = ["nah","no","not rly","difficult","hardly","chances are stable","you moron"]
+while True:
+    print("wait a minute..")
+    time.sleep(1)
+    question = input("Ask me something!\n\n")
 
-while number < 8:
-    number = 0
-    if number == int(1):
-        print(responses[0]
-    number = number + 1
+    
+    number = random.randint(1,7)
+    
+    if number == 1:
+        print(responses[0])
+    elif number == 2:
+        print(responses[1])
+    elif number == 3:
+        print(responses[2])
+    elif number == 4:
+        print(responses[3])
+    elif number == 5:
+        print(responses[4])
+    elif number == 6:
+        print(responses[5])
+    elif number == 7:
+        print(responses[6])
+        
+    play_again = input("do you want to play again? Y/N\n")
+    if play_again == "Y":
+        continue
+    else:
+        break
+print("thanks for playing!")
