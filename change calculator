@@ -4,7 +4,6 @@ print("Working on it..")
 time.sleep(1)
 
 
-change = float(input("Your change from the transaction is.."))*100
 
 #coins
 a = 100
@@ -15,7 +14,8 @@ e = 5
 f = 1 
 
 def calculator():
-    change = float(input("Your change from the transaction is.."))*100
+    time.sleep(1)
+    change = float(input("\nYour change from the transaction is.."))*100
 
     if change < 0:
         print("Error, ringgit amount must be positive.")
@@ -44,5 +44,5 @@ while True:
     else:
         break
 
-
-print("Thank you for using our service.")
+time.sleep(1)
+print("\n\nThank you for using our service.")
