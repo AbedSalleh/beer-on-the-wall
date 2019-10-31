@@ -15,7 +15,7 @@ f = 1
 
 def calculator():
     time.sleep(1)
-    change = float(input("\nYour change from the transaction is.."))*100
+    change = float(input("\nYour change from the transaction is..\n"))*100
 
     if change < 0:
         print("Error, ringgit amount must be positive.")
