@@ -1,0 +1,32 @@
+lst = []
+num = int(input('How many numbers: '))
+for n in range(num):
+    numbers = int(input('Enter number '))
+    lst.append(numbers)
+length = len(lst)
+
+
+#calculate mean
+mean = sum(lst)/length
+print("Mean: ", mean)
+
+
+# sort numbers
+lst.sort()
+print(lst)
+
+#calculate median
+if length % 2 == 0:                             #if the length is even
+    median1 = int(length//2)
+    median2 = int(length//2)-1
+    median = (lst[median1] + lst[median2])/2    
+else:                                           #if the length is not even                                       
+    median = lst[length//2]
+
+print("median: ", median)
+
+
+
+#calculate mode
+# mode = 
+
