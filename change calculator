@@ -1,7 +1,7 @@
 # Change Calculator
 import time 
 print("Working on it..")
-time.sleep(2)
+time.sleep(1)
 
 
 change = float(input("Your change from the transaction is.."))*100
@@ -14,20 +14,35 @@ d = 10
 e = 5
 f = 1 
 
-if change < 0:
-    print("Error, ringgit amount must be positive.")
-else:
-    seringgit = change // a
-    lima_puluh_sen = (change % a) // b
-    dua_puluh_sen = (change % a % b) // c
-    sepuluh_sen = (change % a % b % c) // d
-    lima_sen = (change % a % b % c % d) // e 
-    satu_sen = (change % a % b % c % d % e) // f
+def calculator():
+    change = float(input("Your change from the transaction is.."))*100
 
-    print("The number of coins for ", change/100, "ringgit are: ")
-    print("Seringgit: ", seringgit)
-    print("lima posen: ", lima_puluh_sen)
-    print("dua posen: ", dua_puluh_sen)
-    print("seposen: ", sepuluh_sen)
-    print("lima sen: ", lima_sen)
-    print("satu sen: ", satu_sen)
+    if change < 0:
+        print("Error, ringgit amount must be positive.")
+    else:
+        seringgit = int(change // a)
+        lima_puluh_sen = int(change % a) // b
+        dua_puluh_sen = int(change % a % b) // c
+        sepuluh_sen = int(change % a % b % c) // d
+        lima_sen = int(change % a % b % c % d) // e 
+        satu_sen = int(change % a % b % c % d % e) // f
+
+        print("The number of coins for ", change/100, "ringgit are: ")
+        print("Seringgit: ", seringgit)
+        print("lima posen: ", lima_puluh_sen)
+        print("dua posen: ", dua_puluh_sen)
+        print("seposen: ", sepuluh_sen)
+        print("lima sen: ", lima_sen)
+        print("satu sen: ", satu_sen)
+        time.sleep(1)
+
+while True:
+    calculator()
+    recount = input("Count again?: Y/N\n")
+    if recount == "Y":
+        continue
+    else:
+        break
+
+
+print("Thank you for using our service.")
