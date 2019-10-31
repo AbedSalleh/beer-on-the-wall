@@ -4,7 +4,7 @@ print("Working on it..")
 time.sleep(2)
 
 
-change = int(input("Your change from the transaction is.."))
+change = float(input("Your change from the transaction is.."))*100
 
 #coins
 a = 100
@@ -15,15 +15,19 @@ e = 5
 f = 1 
 
 if change < 0:
-    print("Error, dollar amount must be positive.")
+    print("Error, ringgit amount must be positive.")
 else:
     seringgit = change // a
     lima_puluh_sen = (change % a) // b
-    dua_puluh_sen = change % a % b // c
-    sepuluh_sen = change % d
+    dua_puluh_sen = (change % a % b) // c
+    sepuluh_sen = (change % a % b % c) // d
+    lima_sen = (change % a % b % c % d) // e 
+    satu_sen = (change % a % b % c % d % e) // f
 
-print("The number of coins for ", change, "sen are: ")
-print("Seringgit: " + str( seringgit))
-print("lima posen: ", lima_puluh_sen)
-print("dua posen: ", dua_puluh_sen)
-print("seposen: ", sepuluh_sen)
+    print("The number of coins for ", change/100, "ringgit are: ")
+    print("Seringgit: ", seringgit)
+    print("lima posen: ", lima_puluh_sen)
+    print("dua posen: ", dua_puluh_sen)
+    print("seposen: ", sepuluh_sen)
+    print("lima sen: ", lima_sen)
+    print("satu sen: ", satu_sen)
